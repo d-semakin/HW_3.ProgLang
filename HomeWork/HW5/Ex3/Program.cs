@@ -1,21 +1,22 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 
-void FeelArr (double [] arr){
-    int length = arr.Length;
-    for (int i = 0; i < length; i++)
+double [] FeelArr (int length){
+       double [] arr = new double [length];
+       for (int i = 0; i < length; i++)
     {
-        arr[i]= new Random().Next(1,100000);
+        arr[i]= new Random().Next(0,100)/10.0;
     }
+    return arr;
 }
 
-void PrintArr(double [] arr){
-    int length=arr.Length;
-    for (int i = 0; i < length; i++)
-    {
-        System.Console.Write($"{arr[i]} ");
-    }
-}
+// void PrintArr(double [] arr){
+//     int length=arr.Length;
+//     for (int i = 0; i < length; i++)
+//     {
+//         System.Console.Write($"{arr[i]} ");
+//     }
+// }
 
 double Diff (double [] arr){
     int length = arr.Length;
@@ -42,7 +43,8 @@ double Diff (double [] arr){
 
 System.Console.WriteLine("Введите размер массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-double [] arr = new double [length];
-FeelArr(arr);
-PrintArr(arr);
+
+double [] arr = FeelArr(length);
+System.Console.WriteLine(string.Join("    ", arr));
+// PrintArr(arr);
 Diff(arr);

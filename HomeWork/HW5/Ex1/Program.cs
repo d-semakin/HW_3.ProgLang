@@ -32,7 +32,7 @@ int Count (int[] arr)
     int count = 0;
     for (int i = 0; i < arr.Length; i++){
         if (arr[i]%2==0)
-        count = count+1;
+        count += 1;
     }
     return count;
 }
