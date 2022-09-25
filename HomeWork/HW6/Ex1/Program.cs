@@ -15,7 +15,7 @@ int [] NewArr ()
     for (int i = 0; i < n; i++)
     {
          System.Console.WriteLine($"Введите {i+1}-e число и нажмите Enter: ");
-        arr[i] = Convert.ToInt32(Console.ReadLine());
+         arr[i] = Convert.ToInt32(Console.ReadLine());
     }
     return arr;
 }

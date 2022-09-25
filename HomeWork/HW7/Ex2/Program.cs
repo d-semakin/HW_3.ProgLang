@@ -31,6 +31,13 @@ void PrintArr (int [,] arr)
     System.Console.WriteLine();}
 }
 
+void SearchElement (int [,] arr, int m, int n){
+if (m-1>arr.GetLength(0) || n-1>arr.GetLength(1)){
+    System.Console.WriteLine("Искомого элемента нет в массиве");}
+else {System.Console.WriteLine($"Элемент с индексом [{m}, {n}]: {arr[m-1,n-1]}");}
+}
+
+
 int [,] arr = GetArray(3,4);
 PrintArr(arr);
 
@@ -39,6 +46,4 @@ int m = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Введите номер столбца искомого элемента: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-if (m>arr.GetLength(0) || n>arr.GetLength(1)){
-    System.Console.WriteLine("Искомого элемента нет в массиве");}
-else {System.Console.WriteLine($"Элемент с индексом [{m}, {n}] - {arr[m,n]}");}
+SearchElement( arr,m,n);
